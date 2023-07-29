@@ -1,5 +1,6 @@
 package Day4;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,17 +17,14 @@ public class Task1 {
         int a5 = 0;
         for (int i = 0; i<x.length; i++){
             Random r = new Random();
-            x[i] = r.nextInt(11);
+            x[i] = r.nextInt(10);
             if (x[i] > 8) ++a1;
             if (x[i] == 1) ++a2;
             if (x[i] % 2 == 0 && x[i] != 0) ++a3;
             if (x[i] % 2 != 0) ++a4;
             a5+=x[i];
         }
-        for (int j = 0; j<x.length; j++){
-            System.out.print(x[j] + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(x));
         System.out.println("Array length: " + n);
         System.out.println("The number of numbers is greater than 8: " + a1);
         System.out.println("The number of numbers equals to 1: " + a2);
